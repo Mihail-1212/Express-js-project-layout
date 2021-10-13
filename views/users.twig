@@ -1,0 +1,13 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+  Users
+
+  {{ title }}
+
+  <ul>
+    {% for user in users %}
+        <li>{{ user|json_encode() }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
